@@ -1,8 +1,9 @@
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
 
-#define adjust_volume(x) ( ((x) & 0xFF) >> 2)
+#define quieter(x) ( ((x) & 0xFF) >> 2)
+#define louder(x)  (  (x) << 2 )
 
-#define play(x) putchar(adjust_volume(x))
+#define play(x) putchar(quieter(x))
 #define stereo(x) do { play(x);play(x); } while(0)
 
 /* I USE THE BEST FUNCTION NAMES. */
@@ -18,21 +19,21 @@ void dadadidi() {
 
 void dadadidi2() {
   LOOP(1) {
-    play(i * (i >> 17 | i >> 9) & 46 & i >> 3);
-    play(i * (i >> 6 | i >> 4));
+    play(louder(i * (i >> 17 | i >> 9) & 46 & i >> 3));
+    play(louder(i * (i >> 17 | i >> 9) & 46 & i >> 3));
   }
 }
 
 void woosh() {
   LOOP(1) {
-    play(i * (i >> 12 | i >> 3) & 30 & i << 4);
+    play(louder(i * (i >> 12 | i >> 3) & 30 & (i >> 4)));
     play(i * (i >> 30 | i >> 5));
   }
 }
 
 void something() {
   LOOP(1) {
-    play(i * (i >> 10 | i >> 3));
+    play(quieter(i * (i >> 10 | i >> 3)));
     play(i * (i >> 6 | i >> 4));
   }
 }
