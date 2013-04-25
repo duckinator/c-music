@@ -7,8 +7,8 @@ int i = 0;
 
 void dadadidi() {
   LOOP(1) {
-    play(i * (i >> 17 | i >> 9) & 46 & i >> 3);
-    play(i * (i >> 5  | i >> 3));
+    play(i * (i >> 17 | i >> 9) & i >> 3);
+    play(i * (i >> 5  | i >> 3) & i >> 2);
   }
 }
 
@@ -44,7 +44,7 @@ void something2woosh() {
   int end = i + 18000;
 
   for (; i < end; i++) {
-    play(i * (i >> 5 | i >> 3) & 32 & i >> 2);
+    play(i * (i >> 5 | i >> 5) & (i >> 2));
     play(i * (i >> 30 | i >> 5) & i >> 4);
   }
 }
@@ -56,17 +56,17 @@ void bass1() {
 }
 
 void bass2() {
-  LOOP(1) {
-    if (i % 2)
+  LOOP(3) {
+    if (i % 2 == 0)
       play(i ^ (i >> 30 | i >> 2));
     else
-      play(i);
+      play(i * (i >> 10 | i >> 2) & (i >> 3));
   }
 }
 
 void bass3() {
   LOOP(4) {
-    //play(i ^ (i & i >> 5));
+    play(i ^ (i & i >> 3) ^ (i >> 5));
     play(i ^ (i & i >> 3) & (i >> 5));
   }
 }
