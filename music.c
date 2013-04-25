@@ -1,5 +1,6 @@
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
 #define play(x) putchar((x))
+#define stereo(x) do { play(x);play(x); } while(0)
 
 /* I USE THE BEST FUNCTION NAMES. */
 
@@ -65,9 +66,11 @@ void bass2() {
 }
 
 void bass3() {
-  LOOP(4) {
-    play(i ^ (i & i >> 3) ^ (i >> 5));
-    play(i ^ (i & i >> 3) & (i >> 5));
+  LOOP(2) {
+    if (i % 8 < 4)
+      stereo(i ^ (i & i >> 3) ^ (i >> 5));
+    else
+      stereo(i ^ (i & i >> 2) ^ (i >> 5));
   }
 }
 
