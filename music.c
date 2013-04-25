@@ -1,5 +1,8 @@
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
-#define play(x) putchar((x))
+
+#define adjust_volume(x) ( ((x) & 0xFF) >> 2)
+
+#define play(x) putchar(adjust_volume(x))
 #define stereo(x) do { play(x);play(x); } while(0)
 
 /* I USE THE BEST FUNCTION NAMES. */
