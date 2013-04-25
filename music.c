@@ -55,7 +55,7 @@ void something2woosh() {
 
 void bass1() {
   LOOP(1) {
-    play(i ^ (i >> 30 | i >> 3));
+    stereo(i ^ (i >> 30 | i >> 3));
   }
 }
 
