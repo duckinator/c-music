@@ -1,4 +1,5 @@
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
+#define play(x) putchar((x))
 
 /* I USE THE BEST FUNCTION NAMES. */
 
@@ -6,36 +7,36 @@ int i = 0;
 
 void dadadidi() {
   LOOP(1) {
-    putchar(i * (i >> 17 | i >> 9) & 46 & i >> 3);
-    putchar(i * (i >> 5  | i >> 3));
+    play(i * (i >> 17 | i >> 9) & 46 & i >> 3);
+    play(i * (i >> 5  | i >> 3));
   }
 }
 
 void dadadidi2() {
   LOOP(1) {
-    putchar(i * (i >> 17 | i >> 9) & 46 & i >> 3);
-    putchar(i * (i >> 6 | i >> 4));
+    play(i * (i >> 17 | i >> 9) & 46 & i >> 3);
+    play(i * (i >> 6 | i >> 4));
   }
 }
 
 void woosh() {
   LOOP(1) {
-    putchar(i * (i >> 12 | i >> 3) & 30 & i << 4);
-    putchar(i * (i >> 30 | i >> 5));
+    play(i * (i >> 12 | i >> 3) & 30 & i << 4);
+    play(i * (i >> 30 | i >> 5));
   }
 }
 
 void something() {
   LOOP(1) {
-    putchar(i * (i >> 10 | i >> 3));
-    putchar(i * (i >> 6 | i >> 4));
+    play(i * (i >> 10 | i >> 3));
+    play(i * (i >> 6 | i >> 4));
   }
 }
 
 void something2() {
   LOOP(1) {
-    putchar(i * (i >> 5 | i >> 3) & 32 & i >> 2);
-    putchar(i * (i >> 6 | i >> 4));
+    play(i * (i >> 5 | i >> 3) & 32 & i >> 2);
+    play(i * (i >> 6 | i >> 4));
   }
 }
 
@@ -43,30 +44,30 @@ void something2woosh() {
   int end = i + 18000;
 
   for (; i < end; i++) {
-    putchar(i * (i >> 5 | i >> 3) & 32 & i >> 2);
-    putchar(i * (i >> 30 | i >> 5) & i >> 4);
+    play(i * (i >> 5 | i >> 3) & 32 & i >> 2);
+    play(i * (i >> 30 | i >> 5) & i >> 4);
   }
 }
 
 void bass1() {
   LOOP(1) {
-    putchar(i ^ (i >> 30 | i >> 3));
+    play(i ^ (i >> 30 | i >> 3));
   }
 }
 
 void bass2() {
   LOOP(1) {
     if (i % 2)
-      putchar(i ^ (i >> 30 | i >> 2));
+      play(i ^ (i >> 30 | i >> 2));
     else
-      putchar(i);
+      play(i);
   }
 }
 
 void bass3() {
   LOOP(4) {
-    //putchar(i ^ (i & i >> 5));
-    putchar(i ^ (i & i >> 3) & (i >> 5));
+    //play(i ^ (i & i >> 5));
+    play(i ^ (i & i >> 3) & (i >> 5));
   }
 }
 
