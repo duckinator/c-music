@@ -1,8 +1,3 @@
-#if false
-  gcc $0 && ./a.out | aplay && rm a.out
-  exit
-#endif
-
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
 
 /* I USE THE BEST FUNCTION NAMES. */

@@ -1,5 +1,10 @@
-What is it? It generates music. And pipes it through aplay.
-
-Run `./music.c` and it magically compiles itself and pipes to aplay.
+What is it? It generates music.
 
 *WARNING*: It's super loud because of how it works. You have been warned.
+
+# Running
+
+If you use ALSA, `./aplay.sh`.
+If you use PulseAudio, `./pacat.sh`.
+
+If you use something else, figure it out, and send me a pull request?
