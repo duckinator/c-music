@@ -2,4 +2,4 @@
 
 rm -f ./a.out
 cd $PWD
-gcc music.c && ./a.out
+gcc -std=c99 music.c && ./a.out

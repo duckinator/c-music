@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #define LOOP(seconds) int end = i + (seconds * 8000); for (; i < end; i++)
 
 #define quieter(x) ( ((x) & 0xFF) >> 2)
