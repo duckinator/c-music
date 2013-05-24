@@ -1,3 +1,5 @@
 #!/bin/sh
 
-./run.sh | pacat --format=u8 --rate=8000 --channels=2
+DIR=$(dirname $(readlink -f $0))
+
+$DIR/run.sh | pacat --format=u8 --rate=8000 --channels=2
