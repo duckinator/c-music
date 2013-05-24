@@ -1,5 +1,7 @@
 #!/bin/sh
 
-rm -f ./a.out
+DIR=$(dirname $(readlink -f $0))
 cd $PWD
-gcc -std=c99 music.c && ./a.out
+
+rm -f ./a.out
+gcc -std=c99 -I$DIR/include music.c && ./a.out
