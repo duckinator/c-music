@@ -11,4 +11,6 @@
 #define play(x) putchar(quieter(x))
 #define stereo(x) do { play(x); play(x); } while(0)
 
+#include <hell.h>
+
 #endif /* MUSIC_H */
