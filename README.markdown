@@ -1,6 +1,6 @@
 What is it? It generates music.
 
-I recommend `random-sequence.c`.
+I recommend `five.c`.
 
 # Running
 
