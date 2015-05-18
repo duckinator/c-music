@@ -9,7 +9,7 @@
 #define louder(x)  (  (x) << 2 )
 
 #define play(x) putchar(quieter(x))
-#define stereo(x) do { play(x); play(x); } while(0)
+#define mono(x) do { play(x); play(x); } while(0)
 
 #include <hell.h>
 

@@ -40,7 +40,7 @@ void eight() {
 }
 
 void nine() {
-  stereo(i ^ (i >> 30 | i >> 3));
+  mono(i ^ (i >> 30 | i >> 3));
 }
 
 void ten() {
@@ -53,12 +53,12 @@ void eleven() {
 
 void twelve() {
   // Really quiet
-  stereo(i ^ (i & i >> 3) ^ (i >> 5));
+  mono(i ^ (i & i >> 3) ^ (i >> 5));
 }
 
 void thirteen() {
   // Really quiet
-  stereo(i ^ (i & i >> 2) ^ (i >> 5));
+  mono(i ^ (i & i >> 2) ^ (i >> 5));
 }
 
 void dadadidi() {
@@ -107,7 +107,7 @@ void something2woosh() {
 
 void bass1() {
   LOOP(1) {
-    stereo(i ^ (i >> 30 | i >> 3));
+    mono(i ^ (i >> 30 | i >> 3));
   }
 }
 
@@ -123,9 +123,9 @@ void bass2() {
 void bass3() {
   LOOP(2) {
     if (i % 8 < 4)
-      stereo(i ^ (i & i >> 3) ^ (i >> 5));
+      mono(i ^ (i & i >> 3) ^ (i >> 5));
     else
-      stereo(i ^ (i & i >> 2) ^ (i >> 5));
+      mono(i ^ (i & i >> 2) ^ (i >> 5));
   }
 }
 
