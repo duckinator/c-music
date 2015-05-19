@@ -3,7 +3,7 @@
 
 /* I USE THE BEST FUNCTION NAMES. */
 
-int i = 0;
+long i = 0;
 
 void one() {
   play(i * (i >> 17 | i >> 9) & i >> 3);
